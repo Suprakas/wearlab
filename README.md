@@ -2,6 +2,7 @@
 
 WearLab is a modern, responsive, and accessible interactive product customization interface built in React. It demonstrates component composition, derived state management, controlled inputs, resilient `localStorage` synchronization, accessible keyboard/screen-reader semantics, and fluid inline SVG rendering.
 
+**[Live Demo — WearLabX](https://wearlabx.netlify.app)**
 ---
 
 ## Scope & Purpose
