@@ -1,0 +1,95 @@
+.color-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.color-selector__legend {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.color-selector__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.color-selector__current-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.color-selector__swatches {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.color-selector__option {
+  position: relative;
+}
+
+.color-selector__swatch-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  padding: 3px;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.color-selector__swatch-label:hover {
+  transform: scale(1.06);
+}
+
+/* Selected ring */
+.color-selector__swatch-label--selected {
+  border-color: var(--color-accent);
+}
+
+/* Keyboard focus visibility */
+.color-selector__input:focus-visible + .color-selector__swatch-label {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.color-selector__swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.color-selector__check {
+  width: 18px;
+  height: 18px;
+  animation: checkPop 180ms ease-out forwards;
+}
+
+@keyframes checkPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,80 @@
+.price-summary {
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.price-summary__title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.price-summary__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.price-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+}
+
+.price-summary__row--extra {
+  color: var(--color-text-secondary);
+}
+
+.price-summary__item-label {
+  font-weight: var(--font-weight-medium);
+}
+
+.price-summary__item-price {
+  font-weight: var(--font-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.price-summary__divider {
+  height: 1px;
+  background-color: var(--color-border-medium);
+  margin: var(--space-3) 0;
+  opacity: 0.7;
+}
+
+.price-summary__total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price-summary__total-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.price-summary__total-label {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.price-summary__taxes-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.price-summary__total-amount {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}

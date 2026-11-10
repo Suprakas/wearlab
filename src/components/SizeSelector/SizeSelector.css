@@ -1,0 +1,106 @@
+.size-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.size-selector__legend {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.size-selector__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.size-selector__current {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.size-selector__current-surcharge {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.size-selector__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+}
+
+.size-selector__option {
+  position: relative;
+}
+
+.size-selector__button-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: var(--space-2);
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.size-selector__button-label:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-border-medium);
+}
+
+.size-selector__button-label--selected {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+  box-shadow: 0 2px 6px rgba(91, 66, 243, 0.25);
+}
+
+.size-selector__button-label--selected:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.size-selector__input:focus-visible + .size-selector__button-label {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.size-selector__surcharge-badge {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  margin-top: 2px;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.size-selector__button-label--selected .size-selector__surcharge-badge {
+  color: var(--color-accent-contrast);
+}
+
+.size-selector__helper {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 420px) {
+  .size-selector__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

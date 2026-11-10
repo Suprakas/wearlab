@@ -1,0 +1,121 @@
+.product-preview {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-preview__header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-2);
+}
+
+.product-preview__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 10px;
+  background-color: var(--color-bg-accent-subtle);
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.product-preview__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  display: inline-block;
+}
+
+.product-preview__stage {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 400 / 430;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+}
+
+.product-preview__svg {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.04));
+}
+
+.product-preview__garment-fill {
+  transition: fill var(--transition-slow);
+}
+
+.product-preview__print-group {
+  transition: opacity var(--transition-normal);
+}
+
+.product-preview__print-react,
+.product-preview__print-developer {
+  animation: printEntrance 250ms ease-out forwards;
+}
+
+@keyframes printEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.product-preview__caption {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.product-preview__spec {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.product-preview__spec-dot {
+  color: var(--color-border-medium);
+}
+
+.product-preview__note {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 640px) {
+  .product-preview {
+    padding: var(--space-4);
+  }
+
+  .product-preview__stage {
+    max-width: 320px;
+  }
+}
